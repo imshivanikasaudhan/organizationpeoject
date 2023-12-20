@@ -21,36 +21,36 @@
 </style>
 
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light" style=" background-color:#2AA1FD;">
-        {{-- <img src="image/organization (1).png" alt=""> --}}
-        <i class="fa-solid fa-building-columns text-white"style="font-size: 50px;margin-left: 20px;"></i>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" style=" background-color:#2AA1FD;">
+        <img src="{{asset('image/organization (1).png')}}" alt="" style="margin-left: 10px;">
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <h4><a class="nav-link active text-white" aria-current="page" href="login">Organization
+                    <h4><a class="nav-link active text-white" aria-current="page" href="#" style=" margin-left: 10px; font-weight:400"><strong>Organization</strong>
                             <br>Management</a></h4>
                 </li>
             </ul>
-            <button class="button button4"
-                style="  background-color: white; /* Green */
+            {{-- <form class="d-flex" style="width:10%"> --}}
+                <a
+                        href="{{ url('/add') }}"
+                        style="text-decoration: none; color:#2AA1FD;font-weight: 500; margin: 4px 3px;
+                        font-size: larger;"><button class="button button4"
+                    style="  background-color: white; /* Green */
           border: none;
           color: #2AA1FD;
           padding: 15px 32px;
           text-align: center;
           text-decoration: none;
           display: inline-block;
-          font-size: 16px;
+          font-size: 18px;
+    font-weight: 600;
           margin: 4px 34px;
           width: 136px;
           border-radius:10px;
-          cursor: pointer;"><a
-                    href="{{ url('/add') }}"
-                    style="text-decoration: none; color:#2AA1FD;font-weight: 500;
-                    font-size: larger;">Back</a></button>
+          cursor: pointer;">Back</button></a>
+            {{-- </form> --}}
         </div>
     </nav>
     <section class="container my-5" style="width:50%">
@@ -61,7 +61,7 @@
             </div>
             {{-- <div class="alert alert-success">{{session('success')}}</div> --}}
         @endif
-        <form method="POST" action="/customerprofile">
+        <form method="POST" action="/customerprofile/{{ $user->id }}" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-lg-6 mt-4">
@@ -71,20 +71,22 @@
                             width: 24rem; ">
                         <div class="avatar-upload">
                             <div class="avatar-edit">
-                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                <input type='file' name="image" id="imageUpload" accept=".png, .jpg, .jpeg" />
                                 <label for="imageUpload"></label>
                             </div>
                             <div class="avatar-preview">
                                 <div id="imagePreview">
-                                    <img src="{{ asset('image\profile') }}\{{ $user->image }}"
-                                        class="card-img-top " style="border-radius: 50%;
+                                    <img src="{{ asset('image\profile') }}\{{ $user->image }}" class="card-img-top "
+                                        style="border-radius: 50%;
                                         height: 170px;
                                         width: 170px;
                                         margin-top: 6px;
-                                        margin-left: 5px;" alt="{{ $user->image }}">
+                                        margin-left: 5px;"
+                                        alt="{{ $user->image }}">
                                 </div>
                             </div>
-                            <h5 class="card-title text-center mt-4" style="font-size: xx-large;">{{ $user->fname }}&nbsp;{{ $user->lname }}</h5>
+                            <h5 class="card-title text-center mt-4" style="font-size: xx-large;">
+                                {{ $user->fname }}&nbsp;{{ $user->lname }}</h5>
                         </div>
                         {{-- <img src="{{ asset('image\profile') }}\{{ $user->image }}" class="card-img-top mt-5"
                             alt="{{ $user->image }}"
@@ -142,7 +144,9 @@
             </div>
         </form>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

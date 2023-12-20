@@ -141,15 +141,15 @@ class AuthController extends Controller
             // $user->image = $request->image;
             $user->save();
             //Upload Image Here
-            // if ($request->image) {
-            //     $oldImage = $user->image;
-            //     $text = $request->image->getClientOriginalExtension();
-            //     $newFileName = time() . '.' . $text;
-            //     $request->image->move(public_path() . '/backend/assets/images/profile/', $newFileName); //This will save file in the folder
-            //     $user->image = $newFileName;
-            //     $user->save();
-            //     File::delete(public_path() . '/backend/assets/images/profile/' . $oldImage);
-            // }
+            if ($request->image) {
+                $oldImage = $user->image;
+                $text = $request->image->getClientOriginalExtension();
+                $newFileName = time() . '.' . $text;
+                $request->image->move(public_path() . '/image/profile/', $newFileName); //This will save file in the folder
+                $user->image = $newFileName;
+                $user->save();
+                File::delete(public_path() . '/image/profile/' . $oldImage);
+            }
             // return redirect()->route('customerprofile')->with('success', 'Profile Updated Successfully.');
             return back()->with('success', 'Data Updated Successfully');
         } else {

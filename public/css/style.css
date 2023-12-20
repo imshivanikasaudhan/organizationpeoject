@@ -40,9 +40,9 @@
   }
   .avatar-upload .avatar-edit {
     position: absolute;
-    right: 22px;
+    right: 44px;
     z-index: 1;
-    top: 140px;
+    top: 139px;
   }
   .avatar-upload .avatar-edit input {
     display: none;
@@ -63,7 +63,7 @@
     transition: all 0.2s ease-in-out;
   }
   .avatar-upload .avatar-edit input + label:hover {
-    background: #f1f1f13;
+    background: #f1f1f1;
     border-color: #D6D6D6;
   }
   .avatar-upload .avatar-edit input + label:after {
@@ -82,8 +82,8 @@
     height: 192px;
     position: relative;
     border-radius: 100%;
-    border: 6px solid #F8F8F8;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    /* border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); */
   }
   .avatar-upload .avatar-preview > div {
     width: 100%;
@@ -94,10 +94,7 @@
     background-position: center;
   }
   
-
-
-
-
+  
 
 
   .avatar-upload1 {
@@ -128,7 +125,7 @@
     transition: all 0.2s ease-in-out;
   }
   .avatar-upload1 .avatar-edit input + label:hover {
-    background: #f1f1f13;
+    background: #f1f1f1;
     border-color: #D6D6D6;
   }
   .avatar-upload1 .avatar-edit input + label:after {
@@ -147,8 +144,8 @@
     height: 192px;
     position: relative;
     border-radius: 100%;
-    border: 6px solid #F8F8F8;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    /* border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); */
   }
   .avatar-upload1 .avatar-preview > div {
     width: 100%;

@@ -25,7 +25,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style=" background-color:#2AA1FD;">
-        <img src="image/organization (1).png" alt="" style="margin-left: 20px;">
+        <img src="image/organization (1).png" alt="" style="margin-left: 10px;">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,8 +37,11 @@
                             <br>Management</a></h4>
                 </li>
             </ul>
-            <form class="d-flex" style="width:10%">
-                <button class="button button4"
+            {{-- <form class="d-flex" style="width:10%"> --}}
+                <a
+                        href="{{ url('/add') }}"
+                        style="text-decoration: none; color:#2AA1FD;font-weight: 500; margin: 4px 3px;
+                        font-size: larger;"><button class="button button4"
                     style="  background-color: white; /* Green */
           border: none;
           color: #2AA1FD;
@@ -46,15 +49,13 @@
           text-align: center;
           text-decoration: none;
           display: inline-block;
-          font-size: 16px;
+          font-size: 18px;
+          font-weight: 600;
           margin: 4px 34px;
           width: 136px;
           border-radius:10px;
-          cursor: pointer;"><a
-                        href="{{ url('/add') }}"
-                        style="text-decoration: none; color:#2AA1FD;font-weight: 500; margin: 4px 3px;
-                        font-size: larger;">Back</a></button>
-            </form>
+          cursor: pointer;">Back</button></a>
+            {{-- </form> --}}
         </div>
     </nav>
     <section class="container mt-5">

@@ -31,7 +31,7 @@ Route::get('/login', function () {
 // });
 
 Route::get('/customerprofile/{id}', [AuthController::class, 'show']);
-Route::post('/customerprofile', [AuthController::class, 'showUpdate']);
+Route::post('/customerprofile/{id}', [AuthController::class, 'showUpdate']);
 
 Route::get('/login', [AuthController::class, 'loginView']);
 Route::post('/login', [AuthController::class, 'loginStore']);

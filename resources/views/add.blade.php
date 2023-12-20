@@ -16,7 +16,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style=" background-color:#2AA1FD;">
-        <img src="image/organization (1).png" alt=""style="margin-left: 20px;">
+        <img src="image/organization (1).png" alt="" style="margin-left: 10px;">
         {{-- <i class="fa-solid fa-building-columns text-white"style="font-size: 50px;"></i> --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,8 +30,7 @@
                 </li>
             </ul>
 
-            <button class="button button4"
-                style="  background-color: white; /* Green */
+            <button class="button button4" style="  background-color: white; /* Green */
           border: none;
           color: #2AA1FD;
           padding: 15px 32px;
@@ -41,8 +40,7 @@
           font-size: 16px;
           margin: 4px 37px;
           border-radius:10px;
-          cursor: pointer;"><a
-                    href="{{ url('/addEmployee') }}" style="text-decoration: none; color:#2AA1FD; font-weight: 500;
+          cursor: pointer;"><a href="{{ url('/addEmployee') }}" style="text-decoration: none; color:#2AA1FD; font-weight: 500;
                     font-size: larger;">Add
                     Employee</a></button>
 
@@ -50,22 +48,27 @@
     </nav>
     <section class="container mt-5">
         @foreach ($viewdata as $data)
-            <div class="center d-flex justify-content-evenly">
-                <div class="row mt-3 border rounded-3 shadow-sm" style="    height: 90px;
+        <div class="center d-flex justify-content-evenly">
+            <div class="row mt-3 border rounded-3 shadow-sm" style="height: 90px;
                 width: 50rem;
             ">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-3">
-                        <img src="image\profile\{{ $data->image }}" alt="" width="100px" height="100px" style="border-radius: 100%;height: 64px;    width: 67px;    margin-top: 11px;">
-                    </div>
-                    <div class="col-md-6 mt-4">
-                        <h5 style="margin-left: -97px; margin-top: 7px;">{{ $data->fname }} {{ $data->lname }}</h5>
-                    </div>
-                    <div class="col-md-2 mt-4">
-                        <a href="/customerprofile/{{ $data->id }}" style="text-decoration: none; color:#2AA1FD; margin-left: 87px;"><i
-                                class="fa-solid fa-chevron-right icon-circle" style="color:#2AA1FD; margin-top: 11px;"></i></a>
-                    </div>
-                    {{-- <div class="col-sm-12">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <img src="image\profile\{{ $data->image }}" alt="" width="100px" height="100px" style="border-radius: 100%;
+                         height: 64px; 
+                         width: 67px; 
+                         margin-top: 11px;">
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h5 style="margin-left: -97px; margin-top: 7px;">{{ $data->fname }} {{ $data->lname }}</h5>
+                </div>
+                <div class="col-md-2 mt-4">
+                    <a href="/customerprofile/{{ $data->id }}"
+                        style="text-decoration: none; color:#2AA1FD; margin-left: 87px;"><i
+                            class="fa-solid fa-chevron-right icon-circle"
+                            style="color:#2AA1FD; margin-top: 11px;"></i></a>
+                </div>
+                <!-- {{-- <div class="col-sm-12">
                   <div class="card"
                       style="
                       /* padding: 20px;
@@ -77,16 +80,15 @@
                       <div class="card-body">
                           <h5 class="card-title"><img src="image\security-img1.png" alt="">
                               {{ $data->fname }}{{ $data->lname }}
-                              <a href="/customerprofile/{{ $data->id }}"
-                                  style="text-decoration: none; color:#2AA1FD"><i
-                                      class="fa-solid fa-chevron-right icon-circle"
-                                      style="margin-left: 1000px; margin-bottom:10px;color:#2AA1FD"></i></a>
-                          </h5>
-                      </div>
-                  </div>
-              </div> --}}
-                </div>
+                <a href="/customerprofile/{{ $data->id }}" style="text-decoration: none; color:#2AA1FD"><i
+                        class="fa-solid fa-chevron-right icon-circle"
+                        style="margin-left: 1000px; margin-bottom:10px;color:#2AA1FD"></i></a>
+                </h5>
             </div>
+        </div>
+        </div> --}} -->
+            </div>
+        </div>
         @endforeach
     </section>
 </body>

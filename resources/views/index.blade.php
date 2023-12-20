@@ -30,8 +30,11 @@
         border-bottom-left-radius: 712px;
         border-bottom-right-radius: 712px;
         color: white;">
-            <i class="fa-solid fa-building-columns text-white" style="font-size: 100px;"></i>
-            <h1 class="text-center mt-5 text-white">Organization <br>
+            <div class="text-center">
+                <img src="image/organ.png" alt="" style="width:20%;">
+            </div>
+            <!-- {{-- <i class="fa-solid fa-building-columns text-white" style="font-size: 100px;"></i> --}} -->
+            <h1 class="text-center mt-5 text-white" style="font-size: xxx-large;"><strong style="font-size: xxx-large;">Organization</strong> <br>
                 Management</h1>
         </div>
         <div class=" text-center mt-5">
@@ -61,7 +64,7 @@
                 text-decoration: none;
                 overflow: hidden;
                 cursor: pointer;
-                border-radius: 17px">Tenant/Company</button>
+                border-radius: 17px;">Tenant/Company</button>
             <div class="text-center row" style="background: #2AA1FD;;
                 margin-top: -19%;
     margin-left: 100%;
